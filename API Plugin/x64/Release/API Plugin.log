@@ -1,6 +1,10 @@
 ﻿  Main.cpp
-     Creando biblioteca C:\Users\santi\source\repos\API Plugin\x64\Release\API Plugin.lib y objeto C:\Users\santi\source\repos\API Plugin\x64\Release\API Plugin.exp
-  Generando código
-  All 153 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Generación de código finalizada
-  API Plugin.vcxproj -> C:\Users\santi\source\repos\API Plugin\x64\Release\API Plugin.dll
+  hooks.cpp
+  render.cpp
+     Creating library C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.lib and object C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.exp
+  Generating code
+  3 of 122 functions ( 2.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  API Plugin.vcxproj -> C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.dll

@@ -1,14 +1,14 @@
 #ifndef PLUGIN_H
 #define PLUGIN_H
 #pragma once
-
+#include <string>
 #include <vector>
 
-class Main
+static bool enablemessages = 0;
+
+namespace plugin
 {
-public:
-	static __int64 moduleBase;
-	static std::vector<__int64> API_FunctionList;
+	inline __int64 moduleBase;
 };
 
 extern "C"
