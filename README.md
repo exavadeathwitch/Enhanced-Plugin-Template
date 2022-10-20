@@ -7,5 +7,4 @@ In order to better use this tool for mod creation, I am enhancing the template w
 Such libraries include:
 * Minhook
 
-# Plugin Download Links
-Susanoo Jump Fix https://drive.google.com/file/d/11VpL6xlsHvtD2AtPSC2zhH1jPQd6ywUD/view?usp=sharing
+All of my plugins are in separate branches in this repository, check those for tutorials, documentation, and download links.
