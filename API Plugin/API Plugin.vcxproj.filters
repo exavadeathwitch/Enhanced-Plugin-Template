@@ -32,10 +32,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="render.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mem.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

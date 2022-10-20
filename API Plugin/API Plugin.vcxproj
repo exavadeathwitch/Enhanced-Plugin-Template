@@ -140,7 +140,6 @@
   <ItemGroup>
     <ClInclude Include="hooks.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="mem.hpp" />
     <ClInclude Include="render.h" />
     <ClInclude Include="Thirdparty\MinHook.h" />
   </ItemGroup>
