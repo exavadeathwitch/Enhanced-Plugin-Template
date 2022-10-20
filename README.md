@@ -8,4 +8,4 @@ Such libraries include:
 * Minhook
 
 # Plugin Download Links
-https://drive.google.com/file/d/11VpL6xlsHvtD2AtPSC2zhH1jPQd6ywUD/view?usp=sharing
+Susanoo Jump Fix https://drive.google.com/file/d/11VpL6xlsHvtD2AtPSC2zhH1jPQd6ywUD/view?usp=sharing
