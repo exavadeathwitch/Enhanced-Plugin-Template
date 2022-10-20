@@ -6,3 +6,6 @@ In order to better use this tool for mod creation, I am enhancing the template w
 
 Such libraries include:
 * Minhook
+
+# Plugin Download Links
+https://drive.google.com/file/d/11VpL6xlsHvtD2AtPSC2zhH1jPQd6ywUD/view?usp=sharing
