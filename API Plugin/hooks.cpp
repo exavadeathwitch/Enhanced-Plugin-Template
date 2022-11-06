@@ -4,13 +4,13 @@
 
 #include "Main.h"
 
-#include "render.h"
+#include "player.h"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
-	plugin::hookfunc(moduleBase + 0x9A8E9C + 0xC00, render::renderframe, (LPVOID*)(&orenderframe));
+	plugin::hookfunc(moduleBase + 0x77C048 + 0xC00, ns4::player::susanoojump, (LPVOID*)(&osusanoojump));
 }
 
 //Hooks a singular function.
