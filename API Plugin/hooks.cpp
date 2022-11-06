@@ -4,17 +4,18 @@
 
 #include "Main.h"
 
-#include "render.h"
+#include "commandlist.hpp"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
-	plugin::hookfunc(moduleBase + 0xABD720 + 0xC00, render::renderElements, NULL);
-	//plugin::hookfunc(moduleBase + 0x88DAA0 + 0xC00, render::sub_14088E6A0, (LPVOID*)&osub_14088E6A0);
-	//plugin::hookfunc(moduleBase + 0x89A1E0 + 0xC00, render::sub_14089ADE0, (LPVOID*)&osub_14089ADE0);
-	plugin::hookfunc(moduleBase + 0x9DF050 + 0xC00, render::sub_1409DFC50, (LPVOID*)&osub_1409DFC50);
-	//plugin::hookfunc(moduleBase + 0x9E12E0 + 0xC00, render::sub_1409E1EE0, NULL);
+	plugin::hookfunc(moduleBase + 0x6543D8 + 0xC00, commandlist::functions::sub_140654FD8, (LPVOID*)&osub_140654FD8);
+	plugin::hookfunc(moduleBase + 0x653C48 + 0xC00, commandlist::functions::sub_140654848, (LPVOID*)&osub_140654848);
+	plugin::hookfunc(moduleBase + 0x7FE4C4 + 0xC00, commandlist::functions::ccGetCharCode, (LPVOID*)&occGetCharCode);
+	plugin::hookfunc(moduleBase + 0x1CAB1C + 0xC00, commandlist::functions::strcpy, (LPVOID*)&ostrcpy);
+	//plugin::hookfunc(moduleBase + 0xAB8720 + 0xC00, commandlist::functions::ccUiGetMessage, (LPVOID*)&occUiGetMessage);
+	plugin::hookfunc(moduleBase + 0xAB8BB0 + 0xC00, commandlist::functions::ccReplaceStringTag, (LPVOID*)&occReplaceStringTag);
 }
 
 //Hooks a singular function.

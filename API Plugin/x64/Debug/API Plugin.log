@@ -1,0 +1,60 @@
+﻿  commandlist.cpp
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(20,30): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,8): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,15): error C2146: syntax error: missing ';' before identifier 'ostrcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(52,8): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string(24): message : see declaration of 'std'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(52,14): error C2143: syntax error: missing ';' before '<'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(52,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(52,36): error C2238: unexpected token(s) preceding ';'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(53,8): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string(24): message : see declaration of 'std'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(53,14): error C2143: syntax error: missing ';' before '<'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(53,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(53,37): error C2238: unexpected token(s) preceding ';'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(86,6): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(91,28): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(93,30): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(94,29): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(117,6): error C2065: 'aMessages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(122,28): error C2065: 'aMessages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(124,32): error C2065: 'aMessages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(125,31): error C2065: 'aMessages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(133,9): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string(24): message : see declaration of 'std'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(133,1): error C2065: 'vector': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(133,21): error C2275: 'std::string': illegal use of this type as an expression
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(133): message : see declaration of 'std::string'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(133,29): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(145,6): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(150,17): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(161,9): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\string(24): message : see declaration of 'std'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(161,1): error C2065: 'vector': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(161,21): error C2275: 'std::string': illegal use of this type as an expression
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(161): message : see declaration of 'std::string'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(161,29): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(173,6): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(178,20): error C2065: 'Messages': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.cpp(5,10): fatal error C1083: Cannot open include file: 'Util/Memory/Modify.hpp': No such file or directory
+  hooks.cpp
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(20,30): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,8): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,15): error C2146: syntax error: missing ';' before identifier 'ostrcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\hooks.cpp(13,50): error C2653: 'render': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\hooks.cpp(13,58): error C2065: 'sub_1409DFC50': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\hooks.cpp(13,83): error C2065: 'osub_1409DFC50': undeclared identifier
+  Main.cpp
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(20,30): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,8): error C2365: 'strcpy': redefinition; previous definition was 'function'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130): message : see declaration of 'strcpy'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(21,15): error C2146: syntax error: missing ';' before identifier 'ostrcpy'
+  Generating Code...
