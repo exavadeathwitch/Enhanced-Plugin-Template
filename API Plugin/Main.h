@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-static bool enablemessages = 1;
+static bool enablemessages = 0;
 
 namespace plugin
 {

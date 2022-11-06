@@ -5,6 +5,9 @@
 #include <sys/stat.h>
 #include <string>
 #include <vector>
+#include <Windows.h>
+#include <iostream>
+
 
 typedef __int64(__fastcall* ccUiGetMessage) (__int64 MessageToDecode);
 inline ccUiGetMessage occUiGetMessage;
@@ -28,6 +31,7 @@ namespace commandlist {
 	inline int customCLRun = 0;
 	inline int combos = 0;
 	inline int type = 0;
+	inline int awake = 0;
 	inline std::string kgy = "5kgy";
 	class functions {
 	public:
@@ -62,16 +66,16 @@ namespace commandlist {
 			this->path = ".\\character\\" + charcode;
 		}
 		bool isvalid() {
-			std::ifstream g((path + "\\name.char").c_str());
+			std::ifstream g((path + "\\name.xfbin").c_str());
 			return g.good();
 		}
 		void readcombofile() {
 			clsize = 0;
-			std::ifstream y((path + "\\combos.char").c_str());
+			std::ifstream y((path + "\\combos.xfbin").c_str());
 			if (y.good() == false)
 				return;
 			std::ifstream f;
-			f.open(path + "\\combos.char");
+			f.open(path + "\\combos.xfbin");
 
 			std::string actual = "";
 			while (!f.eof())
@@ -98,11 +102,11 @@ namespace commandlist {
 		}
 		void readacombofile() {
 			clasize = 0;
-			std::ifstream y((path + "\\awacombos.char").c_str());
+			std::ifstream y((path + "\\awacombos.xfbin").c_str());
 			if (y.good() == false)
 				return;
 			std::ifstream e;
-			e.open(path + "\\awacombos.char");
+			e.open(path + "\\awacombos.xfbin");
 
 			std::string actual = "";
 			while (!e.eof())
@@ -129,7 +133,7 @@ namespace commandlist {
 		}
 		void readnamefile() {
 			std::ifstream f;
-			f.open(path + "\\name.char");
+			f.open(path + "\\name.xfbin");
 
 			std::vector<std::string> Messages;
 			std::string actual = "";
@@ -151,13 +155,13 @@ namespace commandlist {
 			this->name = Messages[0];
 		}
 		void readawakenamefile() {
-			std::ifstream y((path + "\\awakening.char").c_str());
+			std::ifstream y((path + "\\awakening.xfbin").c_str());
 			if (y.good() == false) {
 				this->awaname = this->name;
 				return;
 			}
 			std::ifstream f;
-			f.open(path + "\\awakening.char");
+			f.open(path + "\\awakening.xfbin");
 
 			std::vector<std::string> Messages;
 			std::string actual = "";

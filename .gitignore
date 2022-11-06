@@ -3,3 +3,5 @@
 .vs/API Plugin/v16/.suo
 *.db
 *.ipch
+*.ipch
+*.opendb

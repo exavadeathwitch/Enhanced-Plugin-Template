@@ -27,10 +27,9 @@ void __stdcall InitializeCommands(__int64 a, __int64 addCommandFunctionAddress)
 // Use this function to hook any of the game's original functions. I have modified this to initialize and then use minhook for hooks.
 void __stdcall InitializeHooks(__int64 a, __int64 hookFunctionAddress)
 {
-	//plugin::init();
-	//plugin::hookall();
-	//plugin::enableall();
-	std::cout << "blab" << std::endl;
+	plugin::init();
+	plugin::hookall();
+	plugin::enableall();
 }
 
 // Use this function to add any lua commands to the game.

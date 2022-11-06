@@ -14,7 +14,6 @@ void plugin::hookall() {
 	plugin::hookfunc(moduleBase + 0x653C48 + 0xC00, commandlist::functions::sub_140654848, (LPVOID*)&osub_140654848);
 	plugin::hookfunc(moduleBase + 0x7FE4C4 + 0xC00, commandlist::functions::ccGetCharCode, (LPVOID*)&occGetCharCode);
 	plugin::hookfunc(moduleBase + 0x1CAB1C + 0xC00, commandlist::functions::strcpy, (LPVOID*)&ostrcpy);
-	//plugin::hookfunc(moduleBase + 0xAB8720 + 0xC00, commandlist::functions::ccUiGetMessage, (LPVOID*)&occUiGetMessage);
 	plugin::hookfunc(moduleBase + 0xAB8BB0 + 0xC00, commandlist::functions::ccReplaceStringTag, (LPVOID*)&occReplaceStringTag);
 }
 

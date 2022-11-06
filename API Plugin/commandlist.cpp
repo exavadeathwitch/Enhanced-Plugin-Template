@@ -7,6 +7,8 @@
 #include "Util/Memory/String.hpp"
 
 #include "Main.h"
+
+#include "hooks.h"
 int __fastcall commandlist::functions::sub_140654FD8(__int64 a1, int* a2, const char* a3, int a4) {
 	if (commandlist::combos == 1)
 		if (a4 == 0)
@@ -18,6 +20,7 @@ int __fastcall commandlist::functions::sub_140654FD8(__int64 a1, int* a2, const 
 
 commandlist::character clchar;
 __int64 __fastcall commandlist::functions::sub_140654848(__int64 a1) {
+
 	typedef signed char(__fastcall* getCommandList) (__int64 a1);
 	getCommandList getJutsuCommandList = (getCommandList)(plugin::moduleBase + 0x654ED4 + 0xC00);
 	typedef signed __int64(__fastcall* sub_7FF6BFE58250) ();
@@ -38,6 +41,8 @@ __int64 __fastcall commandlist::functions::sub_140654848(__int64 a1) {
 	clchar = commandlist::character(characodestr);
 	*(DWORD*)(PlayerLeader + 0xCBC) = ogawa;
 	if (clchar.isvalid()) {
+		plugin::hookfunc(plugin::moduleBase + 0xAB8720 + 0xC00, commandlist::functions::ccUiGetMessage, (LPVOID*)&occUiGetMessage);
+		plugin::enablehook(plugin::moduleBase + 0xAB8720 + 0xC00);
 		*(DWORD*)(PlayerLeader + 0xC94) = 0;
 		if (*(DWORD*)(PlayerLeader + 0xCBC) == 1)
 			clchar.awake = 1;
@@ -78,6 +83,7 @@ __int64 __fastcall commandlist::functions::sub_140654848(__int64 a1) {
 		util::memory::Modify::write_bytes<5>(plugin::moduleBase + 0x654182 + 0xC00, { jutsucommandlist[0], jutsucommandlist[1], jutsucommandlist[2], jutsucommandlist[3], jutsucommandlist[4] });
 		util::memory::Modify::write_bytes<5>(plugin::moduleBase + 0x654194 + 0xC00, { combocommandlist2[0], combocommandlist2[1], combocommandlist2[2], combocommandlist2[3], combocommandlist2[4] });
 
+		plugin::disablehook(plugin::moduleBase + 0xAB8720 + 0xC00);
 		*(DWORD*)(PlayerLeader + 0xC8C) = characode;
 		*(DWORD*)(PlayerLeader + 0xC94) = costume;
 		return retval;
@@ -149,7 +155,10 @@ __int64 __fastcall commandlist::functions::ccReplaceStringTag(__int64* Src, char
 	if (commandlist::customCLRun == 1 && src == "Kaguya Otsutsuki") {
 		commandlist::customCLRun = 0;
 		a2 = 0x0;
-		a3 = &clchar.awaname[0];
+		if (clchar.awake == 1)
+			a3 = &clchar.awaname[0];
+		else
+			a3 = &clchar.name[0];
 	}
 	return occReplaceStringTag(Src, a2, a3);
 }

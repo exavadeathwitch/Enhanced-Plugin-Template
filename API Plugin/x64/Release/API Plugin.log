@@ -1,44 +1,10 @@
 ﻿  commandlist.cpp
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(10,23): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(13,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(16,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(19,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(22,16): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(25,27): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(28,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(29,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(30,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(31,21): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\Modify.hpp(11,24): error C2429: language feature 'nested-namespace-definition' requires compiler flag '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\Modify.hpp(33,49): error C2760: syntax error: unexpected token '>', expected 'expression'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\Modify.hpp(29,15): message : This diagnostic occurred in the compiler generated function 'std::array<uint8_t,size> util::memory::Modify::read_bytes(const uintptr_t)'
 C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\Modify.hpp(66,9): warning C4551: function call missing argument list
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\String.hpp(6,24): error C2429: language feature 'nested-namespace-definition' requires compiler flag '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Main.h(11,17): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.cpp(30,18): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
-  hooks.cpp
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\hooks.h(11,30): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Main.h(11,17): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(10,23): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(13,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(16,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(19,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(22,16): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(25,27): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(28,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(29,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(30,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(31,21): error C7525: inline variables require at least '/std:c++17'
-  Main.cpp
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Main.h(11,17): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(10,23): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(13,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(16,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(19,22): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(22,16): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(25,27): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(28,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(29,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(30,13): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.hpp(31,21): error C7525: inline variables require at least '/std:c++17'
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\hooks.h(11,30): error C7525: inline variables require at least '/std:c++17'
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.cpp(33,18): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+     Creating library C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.lib and object C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.exp
+  Generating code
+  0 of 346 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  API Plugin.vcxproj -> C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.dll
