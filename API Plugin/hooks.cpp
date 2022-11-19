@@ -13,8 +13,6 @@ void plugin::hookall() {
 	plugin::hookfunc(moduleBase + 0x6543D8 + 0xC00, commandlist::functions::sub_140654FD8, (LPVOID*)&osub_140654FD8);
 	plugin::hookfunc(moduleBase + 0x653C48 + 0xC00, commandlist::functions::sub_140654848, (LPVOID*)&osub_140654848);
 	plugin::hookfunc(moduleBase + 0x7FE4C4 + 0xC00, commandlist::functions::ccGetCharCode, (LPVOID*)&occGetCharCode);
-	plugin::hookfunc(moduleBase + 0x1CAB1C + 0xC00, commandlist::functions::strcpy, (LPVOID*)&ostrcpy);
-	plugin::hookfunc(moduleBase + 0xAB8BB0 + 0xC00, commandlist::functions::ccReplaceStringTag, (LPVOID*)&occReplaceStringTag);
 }
 
 //Hooks a singular function.
@@ -69,6 +67,20 @@ bool plugin::disablehook(__int64 funcaddr) {
 	}
 	if (enablemessages)
 		std::cout << "Hook at " << funcaddr << " was disabled." << std::endl;
+	return 1;
+}
+
+//Removes a single hook.
+bool plugin::removehook(__int64 funcaddr) {
+	bool status = MH_RemoveHook((LPVOID)funcaddr);
+	if (status != MH_OK)
+	{
+		if (enablemessages)
+			std::cout << "Hook at " << funcaddr << " could not be removed." << std::endl;
+		return 0;
+	}
+	if (enablemessages)
+		std::cout << "Hook at " << funcaddr << " was removed." << std::endl;
 	return 1;
 }
 

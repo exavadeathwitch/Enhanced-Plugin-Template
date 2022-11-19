@@ -8,5 +8,6 @@ namespace plugin {
 	void enableall();
 	bool enablehook(__int64 funcaddr);
 	bool disablehook(__int64 funcaddr);
+	bool removehook(__int64 funcaddr);
 	inline std::vector<__int64> funclist;
 }

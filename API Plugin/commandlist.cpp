@@ -43,6 +43,10 @@ __int64 __fastcall commandlist::functions::sub_140654848(__int64 a1) {
 	if (clchar.isvalid()) {
 		plugin::hookfunc(plugin::moduleBase + 0xAB8720 + 0xC00, commandlist::functions::ccUiGetMessage, (LPVOID*)&occUiGetMessage);
 		plugin::enablehook(plugin::moduleBase + 0xAB8720 + 0xC00);
+		plugin::hookfunc(plugin::moduleBase + 0x1CAB1C + 0xC00, commandlist::functions::strcpy, (LPVOID*)&ostrcpy);
+		plugin::enablehook(plugin::moduleBase + 0x1CAB1C + 0xC00);
+		plugin::hookfunc(plugin::moduleBase + 0xAB8BB0 + 0xC00, commandlist::functions::ccReplaceStringTag, (LPVOID*)&occReplaceStringTag);
+		plugin::enablehook(plugin::moduleBase + 0xAB8BB0 + 0xC00);
 		*(DWORD*)(PlayerLeader + 0xC94) = 0;
 		if (*(DWORD*)(PlayerLeader + 0xCBC) == 1)
 			clchar.awake = 1;
@@ -84,6 +88,8 @@ __int64 __fastcall commandlist::functions::sub_140654848(__int64 a1) {
 		util::memory::Modify::write_bytes<5>(plugin::moduleBase + 0x654194 + 0xC00, { combocommandlist2[0], combocommandlist2[1], combocommandlist2[2], combocommandlist2[3], combocommandlist2[4] });
 
 		plugin::disablehook(plugin::moduleBase + 0xAB8720 + 0xC00);
+		plugin::disablehook(plugin::moduleBase + 0xAB8BB0 + 0xC00);
+		plugin::disablehook(plugin::moduleBase + 0x1CAB1C + 0xC00);
 		*(DWORD*)(PlayerLeader + 0xC8C) = characode;
 		*(DWORD*)(PlayerLeader + 0xC94) = costume;
 		return retval;
