@@ -1,0 +1,8 @@
+﻿  hooks.cpp
+     Creating library C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Debug\API Plugin.lib and object C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Debug\API Plugin.exp
+hooks.obj : error LNK2019: unresolved external symbol MH_Initialize referenced in function "bool __cdecl plugin::init(void)" (?init@plugin@@YA_NXZ)
+hooks.obj : error LNK2019: unresolved external symbol MH_CreateHook referenced in function "bool __cdecl plugin::hookfunc(__int64,void *,void * *)" (?hookfunc@plugin@@YA_N_JPEAXPEAPEAX@Z)
+hooks.obj : error LNK2019: unresolved external symbol MH_EnableHook referenced in function "bool __cdecl plugin::enablehook(__int64)" (?enablehook@plugin@@YA_N_J@Z)
+hooks.obj : error LNK2019: unresolved external symbol MH_DisableHook referenced in function "bool __cdecl plugin::disablehook(__int64)" (?disablehook@plugin@@YA_N_J@Z)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Debug\API Plugin.exe : fatal error LNK1120: 5 unresolved externals

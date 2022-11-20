@@ -4,17 +4,13 @@
 
 #include "Main.h"
 
-#include "render.h"
+#include "unlock.hpp"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
-	plugin::hookfunc(moduleBase + 0xABD720 + 0xC00, render::renderElements, NULL);
-	//plugin::hookfunc(moduleBase + 0x88DAA0 + 0xC00, render::sub_14088E6A0, (LPVOID*)&osub_14088E6A0);
-	//plugin::hookfunc(moduleBase + 0x89A1E0 + 0xC00, render::sub_14089ADE0, (LPVOID*)&osub_14089ADE0);
-	plugin::hookfunc(moduleBase + 0x9DF050 + 0xC00, render::sub_1409DFC50, (LPVOID*)&osub_1409DFC50);
-	//plugin::hookfunc(moduleBase + 0x9E12E0 + 0xC00, render::sub_1409E1EE0, NULL);
+	plugin::hookfunc(moduleBase + 0x51623C + 0xC00, ns4::unlock::sub_7FF6BFD16E3C, (LPVOID*)&osub_7FF6BFD16E3C);
 }
 
 //Hooks a singular function.

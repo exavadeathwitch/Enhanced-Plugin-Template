@@ -3,7 +3,6 @@
 #include <vector>
 #include <iostream>
 
-#include "render.h"
 #include "hooks.h"
 
 void MessageCommand();
@@ -45,17 +44,7 @@ void __stdcall InitializeLuaCommands(__int64 a, __int64 addCommandFunction)
 // This function will be called all the time while you're playing after the plugin has been initialized.
 void __stdcall GameLoop(__int64 a)
 {
-	//This if statement enables and disables the hud.
-	if ((GetAsyncKeyState(VK_ESCAPE) & 0x01)) {
-		if (render::hudon) {
-			std::cout << "No hud enabled!" << std::endl;
-			render::hudon = 0;
-		}
-		else {
-			std::cout << "No hud disabled!" << std::endl;
-			render::hudon = 1;
-		}
-	}
+	
 }
 
 // This function is called when the API is loading a mod's files. Return true if the file was read by this plugin, otherwise return false for the API to manage the file.
@@ -66,5 +55,5 @@ bool __stdcall ParseApiFiles(__int64 a, std::string filePath, std::vector<char> 
 
 void MessageCommand()
 {
-	std::cout << "No Hud Plugin" << std::endl;
+	std::cout << "Unlock All Characters Plugin" << std::endl;
 }
