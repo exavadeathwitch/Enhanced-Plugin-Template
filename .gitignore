@@ -5,3 +5,5 @@
 *.ipch
 *.ipch
 *.opendb
+*.db
+*.db
