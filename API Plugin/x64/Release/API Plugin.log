@@ -1,10 +1,40 @@
-﻿  commandlist.cpp
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\Util\Memory\Modify.hpp(66,9): warning C4551: function call missing argument list
-C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\commandlist.cpp(33,18): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+﻿  attachobject.cpp
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.hpp(67,27): warning C4244: 'argument': conversion from '__int64' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(26,20): error C2065: 'grdl': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(47,16): error C2653: 'globals': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(47,25): error C2065: 'hookManager': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(47,51): error C2062: type '__int64 (__cdecl *)(__int64,int,const char *,const char *)' unexpected
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(48,36): error C3536: 'retval': cannot be used before it is initialized
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(54,23): error C2653: 'globals': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(54,32): error C2065: 'hookManager': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(54,58): error C2062: type '__int64 (__cdecl *)(__int64,const char *,__int64)' unexpected
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(60,33): error C2653: 'globals': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(60,42): error C2065: 'moduleBase': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(64,3): error C2065: 'num': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(66,32): error C2065: 'num': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(68,17): error C2653: 'globals': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(68,26): error C2065: 'hookManager': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(68,52): error C2062: type '__int64 (__cdecl *)(__int64,__int64,const char *,const char *)' unexpected
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(70,32): error C2065: 'num': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(71,16): error C3536: 'retval': cannot be used before it is initialized
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(73,9): error C2653: 'globals': is not a class or namespace name
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(73,18): error C2065: 'hookManager': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(73,44): error C2062: type '__int64 (__cdecl *)(__int64,__int64,const char *,const char *)' unexpected
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(101,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(130,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(161,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(191,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(197,16): error C3861: 'occPlayerCreate': identifier not found
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(205,3): error C2065: 'grdl': undeclared identifier
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.cpp(207,11): error C3861: 'occPlayerCreate': identifier not found
   hooks.cpp
-     Creating library C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.lib and object C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.exp
-  Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 346 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  API Plugin.vcxproj -> C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.dll
+C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\API Plugin\attachobject.hpp(67,27): warning C4244: 'argument': conversion from '__int64' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+  Main.cpp

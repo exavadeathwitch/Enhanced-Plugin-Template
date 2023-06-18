@@ -4,15 +4,12 @@
 
 #include "Main.h"
 
-#include "commandlist.hpp"
+#include "attachobject.hpp"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
-	plugin::hookfunc(moduleBase + 0x6543D8 + 0xC00, commandlist::functions::sub_140654FD8, (LPVOID*)&osub_140654FD8);
-	plugin::hookfunc(moduleBase + 0x653C48 + 0xC00, commandlist::functions::sub_140654848, (LPVOID*)&osub_140654848);
-	plugin::hookfunc(moduleBase + 0x7FE4C4 + 0xC00, commandlist::functions::ccGetCharCode, (LPVOID*)&occGetCharCode);
 }
 
 //Hooks a singular function.

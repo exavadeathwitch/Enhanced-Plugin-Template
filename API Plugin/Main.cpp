@@ -3,7 +3,6 @@
 #include <vector>
 #include <iostream>
 
-#include "commandlist.hpp"
 #include "hooks.h"
 
 void MessageCommand();

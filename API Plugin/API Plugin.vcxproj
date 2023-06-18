@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -121,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,15 +135,16 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="commandlist.cpp" />
+    <ClCompile Include="attachobject.cpp" />
     <ClCompile Include="hooks.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="commandlist.hpp" />
+    <ClInclude Include="attachobject.hpp" />
     <ClInclude Include="hooks.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Thirdparty\MinHook.h" />
+    <ClInclude Include="Thirdparty\nlohmann\json.hpp" />
     <ClInclude Include="Util\Memory\Address.hpp" />
     <ClInclude Include="Util\Memory\Memory.hpp" />
     <ClInclude Include="Util\Memory\Modify.hpp" />
