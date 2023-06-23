@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Exavadeathwitch\Documents\GitHub\ns4moddingapi_plugintemplate\x64\Release\API Plugin.dll</FullPath>
+      <FullPath>C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\x64\Release\API Plugin.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

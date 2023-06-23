@@ -3,10 +3,11 @@
 #include <vector>
 #include <iostream>
 
-#include "render.h"
+#include "message.h"
 #include "hooks.h"
 
-void MessageCommand();
+void c_ConvertMessage();
+void c_ViewMessageConversions();
 
 
 // This function is called when booting the game. In the modding api, 0xC00 is added to the module base by default. In my modified code, I am removing it.
@@ -21,6 +22,8 @@ void __stdcall InitializeCommands(__int64 a, __int64 addCommandFunctionAddress)
 	typedef void(__stdcall *AddCmd)(std::string command, __int64 function, int paramcount);
 	AddCmd AddCommand = (AddCmd)addCommandFunctionAddress;
 
+	AddCommand("ConvertMessage", (__int64)c_ConvertMessage, 1);
+	AddCommand("ViewMessageConversions", (__int64)c_ViewMessageConversions, 0);
 	//AddCommand("PluginTest", (__int64)MessageCommand, 0);
 }
 
@@ -45,26 +48,40 @@ void __stdcall InitializeLuaCommands(__int64 a, __int64 addCommandFunction)
 // This function will be called all the time while you're playing after the plugin has been initialized.
 void __stdcall GameLoop(__int64 a)
 {
-	//This if statement enables and disables the hud.
-	if ((GetAsyncKeyState(VK_ESCAPE) & 0x01)) {
-		if (render::hudon) {
-			std::cout << "No hud enabled!" << std::endl;
-			render::hudon = 0;
-		}
-		else {
-			std::cout << "No hud disabled!" << std::endl;
-			render::hudon = 1;
-		}
-	}
+
 }
 
 // This function is called when the API is loading a mod's files. Return true if the file was read by this plugin, otherwise return false for the API to manage the file.
 bool __stdcall ParseApiFiles(__int64 a, std::string filePath, std::vector<char> fileBytes)
 {
+	std::string _ext = filePath.substr(filePath.length() - 4, 4);
+	if (_ext == "ns4s") {
+		message::ReadMessageFile(filePath);
+		return true;
+	}
 	return false;
 }
 
-void MessageCommand()
+void c_ConvertMessage()
 {
-	std::cout << "No Hud Plugin" << std::endl;
+	std::string param1;
+
+	std::cout << "MSG >> ";
+	std::cin >> param1;
+
+	std::cout << reinterpret_cast<const char*>(g_MessageToString((__int64)&param1[0])) << std::endl;
+}
+
+void c_ViewMessageConversions()
+{
+	if (ViewMessageConversions == 0)
+	{
+		std::cout << "Enabling view of message conversions..." << std::endl;
+		ViewMessageConversions = 1;
+	}
+	else
+	{
+		std::cout << "Disabling view of message conversions..." << std::endl;
+		ViewMessageConversions = 0;
+	}
 }
