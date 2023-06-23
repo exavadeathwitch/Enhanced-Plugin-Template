@@ -17,9 +17,6 @@
     <ClCompile Include="hooks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="message.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -29,9 +26,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Thirdparty\MinHook.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,13 +2,8 @@
 #include <stdio.h>
 #include <vector>
 #include <iostream>
-
-#include "message.h"
+#include <fstream>
 #include "hooks.h"
-
-void c_ConvertMessage();
-void c_ViewMessageConversions();
-
 
 // This function is called when booting the game. In the modding api, 0xC00 is added to the module base by default. In my modified code, I am removing it.
 void __stdcall InitializePlugin(__int64 a, std::vector<__int64> b)
@@ -22,8 +17,6 @@ void __stdcall InitializeCommands(__int64 a, __int64 addCommandFunctionAddress)
 	typedef void(__stdcall *AddCmd)(std::string command, __int64 function, int paramcount);
 	AddCmd AddCommand = (AddCmd)addCommandFunctionAddress;
 
-	AddCommand("ConvertMessage", (__int64)c_ConvertMessage, 1);
-	AddCommand("ViewMessageConversions", (__int64)c_ViewMessageConversions, 0);
 	//AddCommand("PluginTest", (__int64)MessageCommand, 0);
 }
 
@@ -51,37 +44,86 @@ void __stdcall GameLoop(__int64 a)
 
 }
 
+void ReadPatchFile(std::string _file)
+{
+	int SlashCount = 0;
+	int ExtensionAddress = 0;
+	for (int x = 0; x < _file.length(); x++)
+	{
+		if (_file[x] == '\\') SlashCount++;
+		if (_file[x] == '.') ExtensionAddress = x;
+	}
+
+	int StartAddress = 0;
+	int SlashesPassed = 0;
+	for (int x = 0; x < _file.length(); x++)
+	{
+		if (_file[x] == '\\') SlashesPassed++;
+
+		if (SlashesPassed == SlashCount)
+		{
+			StartAddress = x + 1;
+			x = _file.length();
+		}
+	}
+
+	std::string Hex = _file.substr(StartAddress, ExtensionAddress - StartAddress);
+
+	//cout << Hex << endl;
+
+	uintptr_t Address = 0;
+
+	try
+	{
+		Address = strtol(Hex.c_str(), NULL, 16);
+	}
+	catch (std::exception e)
+	{
+		Address = 0;
+	}
+
+	if (Address > 0x13B4DAC) Address = Address + 0x400;
+	else if (Address > 0xEAAFAC) Address = Address + 0x400;
+
+	//cout << std::hex << Address << endl;
+
+	std::ifstream f;
+	f.open(_file);
+
+	std::vector<BYTE> replace;
+	int count = 0;
+	while (!f.eof())
+	{
+		replace.push_back(f.get());
+		count++;
+	}
+
+	if (Address != 0x0)
+	{
+		DWORD dwOld = 0;
+		VirtualProtect((void*)(plugin::moduleBase + Address + 0xC00), replace.size(), PAGE_EXECUTE_READWRITE, &dwOld);
+		BYTE v[0x1000];
+		for (int x = 0; x < count; x++)
+		{
+			v[x] = replace[x];
+		}
+
+		//cout << "Patch";
+		std::cout << "Patched .exe at " << std::hex << Address << " (" << std::hex << plugin::moduleBase + Address + 0xC00 << ")" << std::endl;
+		memcpy((void*)(plugin::moduleBase + Address + 0xC00), &v, count - 1);
+		VirtualProtect((void*)(plugin::moduleBase + Address + 0xC00), replace.size(), dwOld, &dwOld);
+	}
+
+	f.close();
+}
+
 // This function is called when the API is loading a mod's files. Return true if the file was read by this plugin, otherwise return false for the API to manage the file.
 bool __stdcall ParseApiFiles(__int64 a, std::string filePath, std::vector<char> fileBytes)
 {
 	std::string _ext = filePath.substr(filePath.length() - 4, 4);
-	if (_ext == "ns4s") {
-		message::ReadMessageFile(filePath);
+	if (_ext == "ns4p") {
+		ReadPatchFile(filePath);
 		return true;
 	}
 	return false;
-}
-
-void c_ConvertMessage()
-{
-	std::string param1;
-
-	std::cout << "MSG >> ";
-	std::cin >> param1;
-
-	std::cout << reinterpret_cast<const char*>(g_MessageToString((__int64)&param1[0])) << std::endl;
-}
-
-void c_ViewMessageConversions()
-{
-	if (ViewMessageConversions == 0)
-	{
-		std::cout << "Enabling view of message conversions..." << std::endl;
-		ViewMessageConversions = 1;
-	}
-	else
-	{
-		std::cout << "Disabling view of message conversions..." << std::endl;
-		ViewMessageConversions = 0;
-	}
 }

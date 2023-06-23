@@ -4,15 +4,12 @@
 
 #include "Main.h"
 
-#include "message.h"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
 	//plugin::hookfunc(moduleBase, Hook_MsgToString2, NULL);
-	plugin::hookfunc(moduleBase + 0xAB8720 + 0xC00, message::Hook_MsgToString, (LPVOID*)&g_MessageToString);
-	plugin::hookfunc(moduleBase + 0xAB87D0 + 0xC00, message::Hook_MsgToString_Alt, (LPVOID*)&g_MessageToString2);
 }
 
 //Hooks a singular function.
