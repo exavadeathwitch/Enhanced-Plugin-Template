@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <vector>
 #include <iostream>
-
-#include "message.h"
+#include <filesystem>
+#include <fstream>
 #include "hooks.h"
+#include "cpk.h"
 
 void c_ConvertMessage();
 void c_ViewMessageConversions();
@@ -21,9 +22,6 @@ void __stdcall InitializeCommands(__int64 a, __int64 addCommandFunctionAddress)
 {
 	typedef void(__stdcall *AddCmd)(std::string command, __int64 function, int paramcount);
 	AddCmd AddCommand = (AddCmd)addCommandFunctionAddress;
-
-	AddCommand("ConvertMessage", (__int64)c_ConvertMessage, 1);
-	AddCommand("ViewMessageConversions", (__int64)c_ViewMessageConversions, 0);
 	//AddCommand("PluginTest", (__int64)MessageCommand, 0);
 }
 
@@ -51,37 +49,59 @@ void __stdcall GameLoop(__int64 a)
 
 }
 
+std::vector<BYTE> ReadAllBytes(std::string _file)
+{
+	std::ifstream f;
+	f.open(_file);
+
+	int FileSize = 0;
+	while (!f.eof())
+	{
+		f.get();
+		FileSize++;
+	}
+
+	f.close();
+	f.open(_file, std::ios::binary);
+
+	std::vector<BYTE> result(FileSize);
+
+	f.seekg(0, std::ios::beg);
+
+	for (int x = 0; x < FileSize; x++)
+	{
+		BYTE a = f.get();
+		memcpy((void*)&result[0 + x], &a, 1);
+	}
+
+	f.close();
+
+	return result;
+}
+
 // This function is called when the API is loading a mod's files. Return true if the file was read by this plugin, otherwise return false for the API to manage the file.
 bool __stdcall ParseApiFiles(__int64 a, std::string filePath, std::vector<char> fileBytes)
 {
 	std::string _ext = filePath.substr(filePath.length() - 4, 4);
-	if (_ext == "ns4s") {
-		message::ReadMessageFile(filePath);
+	std::cout << _ext << std::endl;
+	if (_ext == ".cpk") {
+		std::string cpkinfo = std::filesystem::path(filePath).replace_extension("cpk.info").string();
+		std::string _file = filePath;
+		if (std::filesystem::exists(cpkinfo))
+		{
+			std::vector<BYTE> fileBytes1 = ReadAllBytes(cpkinfo);
+			int priority = fileBytes1[0] + (fileBytes1[1] * 0x100) + (fileBytes1[2] * 0x10000) + (fileBytes1[3] * 0x1000000);
+			std::cout << "CpkLoader :: Priority set for cpk " << std::filesystem::path(_file).filename() << " to " << std::dec << priority << "." << std::endl;
+			CpkToLoad.push_back(filePath);
+			CpkPriority.push_back(priority);
+		}
+		else
+		{
+			std::cout << "CpkLoader :: Info file for cpk " << std::filesystem::path(_file).filename() << " was not found. Setting priority to default (13)." << std::endl;
+			CpkToLoad.push_back(filePath);
+			CpkPriority.push_back(13);
+		}
 		return true;
 	}
 	return false;
-}
-
-void c_ConvertMessage()
-{
-	std::string param1;
-
-	std::cout << "MSG >> ";
-	std::cin >> param1;
-
-	std::cout << reinterpret_cast<const char*>(g_MessageToString((__int64)&param1[0])) << std::endl;
-}
-
-void c_ViewMessageConversions()
-{
-	if (ViewMessageConversions == 0)
-	{
-		std::cout << "Enabling view of message conversions..." << std::endl;
-		ViewMessageConversions = 1;
-	}
-	else
-	{
-		std::cout << "Disabling view of message conversions..." << std::endl;
-		ViewMessageConversions = 0;
-	}
 }
