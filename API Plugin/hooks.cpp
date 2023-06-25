@@ -4,14 +4,15 @@
 
 #include "Main.h"
 
-#include "cpk.h"
+#include "condition.h"
 
 #include "Thirdparty/MinHook.h"
 
 //Use minhook to hook all functions here.
 void plugin::hookall() {
 	//plugin::hookfunc(moduleBase, Hook_MsgToString2, NULL);
-	plugin::hookfunc(moduleBase + 0x854F3C + 0xC00, cpk::loadCpkInitial, (LPVOID*)&CPK);
+	plugin::hookfunc(moduleBase + 0x7F0454 + 0xC00, condition::CreatePartner, (LPVOID*)&gpio);
+	plugin::hookfunc(moduleBase + 0x7C5334 + 0xC00, condition::Create, (LPVOID*)&co);
 }
 
 //Hooks a singular function.

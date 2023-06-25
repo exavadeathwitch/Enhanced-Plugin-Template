@@ -1,8 +1,12 @@
 ﻿  Main.cpp
+  condition.cpp
+C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\API Plugin\condition.cpp(42,41): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\API Plugin\condition.cpp(88,41): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  hooks.cpp
      Creating library C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\x64\Release\API Plugin.lib and object C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\x64\Release\API Plugin.exp
   Generating code
-  5 of 646 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+  3 of 362 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   API Plugin.vcxproj -> C:\Users\Exavadeathwitch\Documents\GitHub\Enhanced-Plugin-Template\x64\Release\API Plugin.dll

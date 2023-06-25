@@ -17,7 +17,7 @@
     <ClCompile Include="hooks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cpk.cpp">
+    <ClCompile Include="condition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,7 +31,7 @@
     <ClInclude Include="Thirdparty\MinHook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cpk.h">
+    <ClInclude Include="condition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

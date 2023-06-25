@@ -136,12 +136,12 @@
   <ItemGroup>
     <ClCompile Include="hooks.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="cpk.cpp" />
+    <ClCompile Include="condition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hooks.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="cpk.h" />
+    <ClInclude Include="condition.h" />
     <ClInclude Include="Thirdparty\MinHook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
