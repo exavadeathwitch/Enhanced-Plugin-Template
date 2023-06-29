@@ -83,7 +83,6 @@ std::vector<BYTE> ReadAllBytes(std::string _file)
 bool __stdcall ParseApiFiles(__int64 a, std::string filePath, std::vector<char> fileBytes)
 {
 	std::string _ext = filePath.substr(filePath.length() - 4, 4);
-	std::cout << _ext << std::endl;
 	if (_ext == ".cpk") {
 		std::string cpkinfo = std::filesystem::path(filePath).replace_extension("cpk.info").string();
 		std::string _file = filePath;

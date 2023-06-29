@@ -11,7 +11,7 @@
 //Use minhook to hook all functions here.
 void plugin::hookall() {
 	//plugin::hookfunc(moduleBase, Hook_MsgToString2, NULL);
-	plugin::hookfunc(moduleBase + 0x854F3C + 0xC00, cpk::loadCpkInitial, (LPVOID*)&CPK);
+	plugin::hookfunc(moduleBase + 0x644C28 + 0xC00, cpk::loadCpkInitial, (LPVOID*)&CPK);
 }
 
 //Hooks a singular function.
